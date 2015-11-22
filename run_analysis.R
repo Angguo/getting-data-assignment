@@ -34,4 +34,4 @@ finaltidy<-allin[,c(desiredmean,desiredstd,"activity","use","subject")]
 
 avetidy<-finaltidy %>% select(-use) %>% group_by(activity,subject) %>% summarise_each(funs(mean))
 
-write.table(avetidy, file="averagetidyfile.csv",row.name=FALSE, sep=",")
+write.table(avetidy, file="averagetidyfile.txt",row.name=FALSE, sep=",")
